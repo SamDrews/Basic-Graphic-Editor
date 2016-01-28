@@ -10,6 +10,14 @@ import java.awt.*;
  * @see Shape
  */
 public class Ellipse extends Shape {
+  /**
+   * Create a Shape, setting its color.
+   *
+   * @param c the color you wish the shape to initially have
+   */
+  public Ellipse(Color c) {
+    super(c);
+  }
   // YOU FILL IN INSTANCE VARIABLES AND METHODS.
 
   // Helper method that returns whether Point p is in an Ellipse with the given
@@ -26,5 +34,25 @@ public class Ellipse extends Shape {
     // Now we just apply the standard geometry formula.
     // (See CRC, 29th edition, p. 178.)
     return Math.pow(x / a, 2) + Math.pow(y / b, 2) <= 1;
+  }
+
+  @Override
+  public void drawShape(Graphics page) {
+
+  }
+
+  @Override
+  public boolean containsPoint(Point p) {
+    return false;
+  }
+
+  @Override
+  public void move(int deltaX, int deltaY) {
+
+  }
+
+  @Override
+  public Point getCenter() {
+    return null;
   }
 }

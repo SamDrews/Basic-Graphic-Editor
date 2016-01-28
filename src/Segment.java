@@ -10,6 +10,14 @@ import java.awt.*;
  * @see Shape
  */
 public class Segment extends Shape {
+  /**
+   * Create a Shape, setting its color.
+   *
+   * @param c the color you wish the shape to initially have
+   */
+  public Segment(Color c) {
+    super(c);
+  }
   // YOU FILL IN INSTANCE VARIABLES AND METHODS.
 
   // Helper method that returns true if Point p is within a tolerance of a
@@ -49,5 +57,25 @@ public class Segment extends Shape {
       // Return the distance between Point p and (x, y).
       return Math.sqrt(Math.pow(p.x - x, 2) + Math.pow(p.y - y, 2));
     }
+  }
+
+  @Override
+  public void drawShape(Graphics page) {
+
+  }
+
+  @Override
+  public boolean containsPoint(Point p) {
+    return false;
+  }
+
+  @Override
+  public void move(int deltaX, int deltaY) {
+
+  }
+
+  @Override
+  public Point getCenter() {
+    return null;
   }
 }
