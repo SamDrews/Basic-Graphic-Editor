@@ -44,4 +44,8 @@ public class Drawing {
     public void makeShape(Shape s) {
         shapeList.add(0, s);
     }
+
+    public void setColor(Color c) {
+        color = c;
+    }
 }

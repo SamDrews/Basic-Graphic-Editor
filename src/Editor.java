@@ -215,6 +215,7 @@ public class Editor extends JApplet {
   private class RedButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
       colorBox.show(Color.red);
+      dwg.setColor(Color.red);
       cmd = new ColorCmd();
       repaint();
     }
@@ -226,6 +227,7 @@ public class Editor extends JApplet {
   private class GreenButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
       colorBox.show(Color.green);
+      dwg.setColor(Color.green);
       cmd = new ColorCmd();
       repaint();
     }
@@ -237,6 +239,7 @@ public class Editor extends JApplet {
   private class BlueButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
       colorBox.show(Color.blue);
+      dwg.setColor(Color.blue);
       cmd = new ColorCmd();
       repaint();
     }

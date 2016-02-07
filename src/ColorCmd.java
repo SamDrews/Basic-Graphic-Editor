@@ -8,7 +8,7 @@ public class ColorCmd extends Command {
     private Color color;
 
     public void executeClick(Point p, Drawing d) {
-        Color currentColor = d.getColor();
+        color = d.getColor();
         Shape selectedShape = d.getFrontmostContainer(p);
         selectedShape.setColor(color);
     }
