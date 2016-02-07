@@ -40,4 +40,12 @@ public class Rectangle extends Shape {
         Point middle = new Point((int)midX, (int)midY);
         return middle;
     }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
 }

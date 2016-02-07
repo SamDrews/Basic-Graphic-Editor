@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Drawing {
     private Color color;
-    private ArrayList shapeList = new ArrayList();
+    private ArrayList<Shape> shapeList = new ArrayList<>();
 
     public Drawing(Color c){
         color = c;
@@ -18,16 +18,30 @@ public class Drawing {
     }
 
     public void draw(Graphics g){ // iterate through list, from back to front, call given draw method
-        for (int i=shapeList.size(); i > 0; i--) {
-            Shape currentShape =
-            .draw(g);shapeList.get(i);
+        for (int i=shapeList.size() - 1; i > 0; i--) {
+            Shape currentShape = shapeList.get(i);
+            currentShape.draw(g);
         }
     }
 
+    /**
+     * Given a Point p, returns the frontmost Shape in the Drawing
+     */
     public Shape getFrontmostContainer(Point p){
-        // Fill IN
+        for (Shape givenShape : shapeList) {
+            if (givenShape.containsPoint(p)) {
+                return givenShape;
+            }
+        }
         return null;
     }
 
+    public void createWhileDrag(Shape s) {
+        //shapeList.remove(0);
+        makeShape(s);
+    }
 
+    public void makeShape(Shape s) {
+        shapeList.add(s);
+    }
 }

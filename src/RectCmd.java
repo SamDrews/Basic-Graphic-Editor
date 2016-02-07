@@ -5,8 +5,7 @@ import java.awt.*;
  */
 public class RectCmd extends Command {
     private Color color; // Rect's color
-    private int myX, myY, width, height; // Rect's width, height, and x and y coordinates
-    private Rectangle currentRect = null;
+    private double myX, myY, width, height; // Rect's width, height, and x and y coordinates
 
     public void executePress(Point p, Drawing dwg) {
         myX = p.x;
@@ -14,12 +13,20 @@ public class RectCmd extends Command {
         width = 0;
         height = 0;
         color = dwg.getColor();
-        currentRect = new Rectangle(color, p);
+
+        dwg.makeShape(new Rectangle(color, p));
     }
 
     public void executeDrag(Point p, Drawing dwg) {
-        if (currentRect != null) {
+        width = Math.abs(p.x - myX);
+        height = Math.abs(p.y - myY);
 
-        }
+        Point origPoint = new Point((int)Math.min(p.x, myX), (int)Math.min(p.y, myY));
+        Rectangle newRect = new Rectangle(color, origPoint);
+
+        newRect.setHeight(height);
+        newRect.setWidth(width);
+
+        dwg.createWhileDrag(newRect);
     }
 }
