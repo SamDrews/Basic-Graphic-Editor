@@ -48,4 +48,8 @@ public class Drawing {
     public void setColor(Color c) {
         color = c;
     }
+
+    public void removeShape(Shape s) {
+        shapeList.remove(s);
+    }
 }
