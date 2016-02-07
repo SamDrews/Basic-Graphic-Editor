@@ -52,4 +52,14 @@ public class Drawing {
     public void removeShape(Shape s) {
         shapeList.remove(s);
     }
+
+    public void toFront(Shape s) {
+        shapeList.remove(s);
+        makeShape(s);
+    }
+
+    public void toBack(Shape s) {
+        shapeList.remove(s);
+        shapeList.add(shapeList.size(), s);
+    }
 }
