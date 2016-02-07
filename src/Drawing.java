@@ -37,7 +37,7 @@ public class Drawing {
     }
 
     public void createWhileDrag(Shape s) {
-        //shapeList.remove(0);
+        shapeList.remove(0);
         makeShape(s);
     }
 
