@@ -18,7 +18,7 @@ public class Drawing {
     }
 
     public void draw(Graphics g){ // iterate through list, from back to front, call given draw method
-        for (int i=shapeList.size() - 1; i > 0; i--) {
+        for (int i=shapeList.size() - 1; i >= 0; i--) {
             Shape currentShape = shapeList.get(i);
             currentShape.draw(g);
         }
@@ -42,6 +42,6 @@ public class Drawing {
     }
 
     public void makeShape(Shape s) {
-        shapeList.add(s);
+        shapeList.add(0, s);
     }
 }
