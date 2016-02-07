@@ -1,4 +1,5 @@
 import java.awt.*;
+
 /**
  * Command.java
  * Superclass for commands.

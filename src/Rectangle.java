@@ -4,32 +4,40 @@ import java.awt.*;
  * Created by samdrews on 1/27/16.
  */
 public class Rectangle extends Shape {
+    private double myX, myY, width, height; // Rect's width, height, and x and y coordinates
+
     /**
-     * Create a Shape, setting its color.
-     *
+     * Create a Rectangle, setting its color, x and y coordinates, width, and height
      * @param c the color you wish the shape to initially have
      */
-    public Rectangle(Color c) {
+    public Rectangle(Color c, Point p) {
         super(c);
+        myX = p.x;
+        myY = p.y;
+        width = 0;
+        height = 0;
     }
 
-    @Override
     public void drawShape(Graphics page) {
-
+        page.fillRect((int)myX, (int)myY, (int)width, (int)height);
     }
 
-    @Override
     public boolean containsPoint(Point p) {
-        return false;
+        return (myX < p.getX() && myY < p.getY()
+                && myX + width > p.getX()
+                && myY + height > p.getY());
     }
 
-    @Override
     public void move(int deltaX, int deltaY) {
+        myX += deltaX;
+        myY += deltaY;
 
     }
 
-    @Override
     public Point getCenter() {
-        return null;
+        double midX = (width / 2) + myX;
+        double midY = (height / 2) + myY;
+        Point middle = new Point((int)midX, (int)midY);
+        return middle;
     }
 }
