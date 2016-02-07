@@ -10,6 +10,8 @@ import java.awt.*;
  * @see Shape
  */
 public class Ellipse extends Shape {
+  private double myX, myY, width, height;
+
   /**
    * Create a Shape, setting its color.
    *
@@ -18,7 +20,6 @@ public class Ellipse extends Shape {
   public Ellipse(Color c) {
     super(c);
   }
-  // YOU FILL IN INSTANCE VARIABLES AND METHODS.
 
   // Helper method that returns whether Point p is in an Ellipse with the given
   // top left corner and size.
