@@ -17,8 +17,12 @@ public class Ellipse extends Shape {
    *
    * @param c the color you wish the shape to initially have
    */
-  public Ellipse(Color c) {
+  public Ellipse(Color c, Point p) {
     super(c);
+    myX = p.x;
+    myY = p.y;
+    width = 0;
+    height = 0;
   }
 
   // Helper method that returns whether Point p is in an Ellipse with the given
@@ -37,23 +41,38 @@ public class Ellipse extends Shape {
     return Math.pow(x / a, 2) + Math.pow(y / b, 2) <= 1;
   }
 
-  @Override
+
   public void drawShape(Graphics page) {
-
+    page.fillOval((int)myX, (int)myY, (int)width, (int)height);
   }
 
-  @Override
+
   public boolean containsPoint(Point p) {
-    return false;
+    return (myX < p.getX() && myY < p.getY()
+            && myX + width > p.getX()
+            && myY + height > p.getY());
   }
 
-  @Override
+
   public void move(int deltaX, int deltaY) {
-
+    myX += deltaX;
+    myY += deltaY;
   }
 
-  @Override
   public Point getCenter() {
-    return null;
+    double a = width / 2.0;
+    double b = height / 2.0;
+    double centerX = myX + a;
+    double centerY = myY + b;
+    Point newCenter = new Point((int)centerX, (int)centerY);
+    return newCenter;
+  }
+
+  public void setWidth(double width) {
+    this.width = width;
+  }
+
+  public void setHeight(double height) {
+    this.height = height;
   }
 }

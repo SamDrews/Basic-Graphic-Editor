@@ -10,15 +10,21 @@ import java.awt.*;
  * @see Shape
  */
 public class Segment extends Shape {
+  private double initX, initY, finalX, finalY;
+  private final static int THE_TOLERANCE = 3;
   /**
    * Create a Shape, setting its color.
    *
    * @param c the color you wish the shape to initially have
    */
-  public Segment(Color c) {
+  public Segment(Color c, Point initP, Point finalP) {
     super(c);
+    initX = initP.x;
+    initY = initP.y;
+    finalX = finalP.x;
+    finalY = finalP.y;
   }
-  // YOU FILL IN INSTANCE VARIABLES AND METHODS.
+
 
   // Helper method that returns true if Point p is within a tolerance of a
   // given bounding box. Here, the bounding box is given by the coordinates of
@@ -59,23 +65,34 @@ public class Segment extends Shape {
     }
   }
 
-  @Override
-  public void drawShape(Graphics page) {
 
+  public void drawShape(Graphics page) {
+    page.drawLine((int)initX, (int)initY, (int)finalX, (int)finalY);
   }
 
-  @Override
+
   public boolean containsPoint(Point p) {
+    boolean hasPoint = almostContainsPoint(p, (int)initX, (int)initY, (int)finalX, (int)finalY, THE_TOLERANCE);
+    double distance = distanceToPoint(p, (int)initX, (int)initY, (int)finalX, (int) finalY);
+    if (hasPoint && distance <= THE_TOLERANCE) {
+      return true;
+    }
     return false;
   }
 
-  @Override
-  public void move(int deltaX, int deltaY) {
 
+  public void move(int deltaX, int deltaY) {
+    initX += deltaX;
+    finalX += deltaX;
+    initY += deltaY;
+    finalY += deltaY;
   }
 
-  @Override
+
   public Point getCenter() {
-    return null;
+    double x = (initX + finalX) / 2;
+    double y = (initY + finalY) / 2;
+    Point newCenter = new Point((int)x, (int)y);
+    return newCenter;
   }
 }
