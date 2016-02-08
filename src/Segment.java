@@ -85,10 +85,7 @@ public class Segment extends Shape {
   public boolean containsPoint(Point p) {
     boolean hasPoint = almostContainsPoint(p, (int)initX, (int)initY, (int)finalX, (int)finalY, THE_TOLERANCE);
     double distance = distanceToPoint(p, (int)initX, (int)initY, (int)finalX, (int) finalY);
-    if (hasPoint && distance <= THE_TOLERANCE) {
-      return true;
-    }
-    return false;
+    return hasPoint && distance <= THE_TOLERANCE;
   }
 
   /**
