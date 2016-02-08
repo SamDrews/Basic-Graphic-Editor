@@ -13,9 +13,9 @@ public class Ellipse extends Shape {
   private double myX, myY, width, height;
 
   /**
-   * Create a Shape, setting its color.
+   * Create an Ellipse, setting its color.
    *
-   * @param c the color you wish the shape to initially have
+   * @param c the color you wish the ellipse to initially have
    */
   public Ellipse(Color c, Point p) {
     super(c);
@@ -41,22 +41,41 @@ public class Ellipse extends Shape {
     return Math.pow(x / a, 2) + Math.pow(y / b, 2) <= 1;
   }
 
-
+  /**
+   * Draw the Ellipse.
+   *
+   * @param page the page you wish to draw the ellipse on
+   */
   public void drawShape(Graphics page) {
     page.fillOval((int)myX, (int)myY, (int)width, (int)height);
   }
 
-
+  /**
+   * Checks a given Point
+   *
+   * @param p the Point you wish to check
+   * @return true if the Point is there
+   */
   public boolean containsPoint(Point p) {
     return pointInEllipse(p, (int)myX, (int)myY, (int)width, (int)height);
   }
 
-
+  /**
+   * Moves Ellipse by updating its X and Y coordinates
+   *
+   * @param deltaX the change in X values
+   * @param deltaY the change in Y values
+   */
   public void move(int deltaX, int deltaY) {
     myX += deltaX;
     myY += deltaY;
   }
 
+  /**
+   * Gets the center of an Ellipse
+   *
+   * @return a Point in the center of en Ellipse
+   */
   public Point getCenter() {
     double a = width / 2.0;
     double b = height / 2.0;
@@ -66,10 +85,20 @@ public class Ellipse extends Shape {
     return newCenter;
   }
 
+  /**
+   * Sets the width of an Ellipse
+   *
+   * @param width the new width
+   */
   public void setWidth(double width) {
     this.width = width;
   }
 
+  /**
+   * Sets the width of a Rectangle
+   *
+   * @param height the new height
+   */
   public void setHeight(double height) {
     this.height = height;
   }

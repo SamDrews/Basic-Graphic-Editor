@@ -11,6 +11,12 @@ public class RectCmd extends Command {
     private Color color; // Rect's color
     private double myX, myY, width, height; // Rect's width, height, and x and y coordinates
 
+    /**
+     * On a mouse press, sets x and y coordinates, height, width, and color
+     *
+     * @param p the Point where the mouse is clicked
+     * @param dwg the Drawing to draw to the canvas
+     */
     public void executePress(Point p, Drawing dwg) {
         myX = p.x;
         myY = p.y;
@@ -21,6 +27,13 @@ public class RectCmd extends Command {
         dwg.makeShape(new Rectangle(color, p));
     }
 
+    /**
+     * When mouse is dragged, draws a Rectangle on canvas and
+     *  when released will add a Rectangle to the canvas
+     *
+     * @param p the Point where the mouse is clicked
+     * @param dwg the Drawing to draw to the canvas
+     */
     public void executeDrag(Point p, Drawing dwg) {
         width = Math.abs(p.x - myX);
         height = Math.abs(p.y - myY);

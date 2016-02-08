@@ -14,9 +14,10 @@ public class Segment extends Shape {
   private final static int THE_TOLERANCE = 3;
 
   /**
-   * Create a Shape, setting its color.
+   * Create a Segment, setting its color, initial X coordinate, initial Y coordinate,
+   *  final X coordinate, and final Y coordinate
    *
-   * @param c the color you wish the shape to initially have
+   * @param c the color you wish the segment to initially have
    */
   public Segment(Color c, Point initP, Point finalP) {
     super(c);
@@ -66,12 +67,21 @@ public class Segment extends Shape {
     }
   }
 
-
+  /**
+   * Draw the Segment.
+   *
+   * @param page the page you wish to draw the segment on
+   */
   public void drawShape(Graphics page) {
     page.drawLine((int)initX, (int)initY, (int)finalX, (int)finalY);
   }
 
-
+  /**
+   * Checks for a given Point
+   *
+   * @param p the Point you wish to check
+   * @return true if the Point is there
+   */
   public boolean containsPoint(Point p) {
     boolean hasPoint = almostContainsPoint(p, (int)initX, (int)initY, (int)finalX, (int)finalY, THE_TOLERANCE);
     double distance = distanceToPoint(p, (int)initX, (int)initY, (int)finalX, (int) finalY);
@@ -81,7 +91,12 @@ public class Segment extends Shape {
     return false;
   }
 
-
+  /**
+   * Moves Segment by updating its X and Y coordinates
+   *
+   * @param deltaX the change in X values
+   * @param deltaY the change in Y values
+   */
   public void move(int deltaX, int deltaY) {
     initX += deltaX;
     finalX += deltaX;
@@ -89,7 +104,11 @@ public class Segment extends Shape {
     finalY += deltaY;
   }
 
-
+  /**
+   * Gets the center of a Segment
+   *
+   * @return a Point in the center of a Segment
+   */
   public Point getCenter() {
     double x = (initX + finalX) / 2;
     double y = (initY + finalY) / 2;
