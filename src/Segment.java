@@ -95,4 +95,15 @@ public class Segment extends Shape {
     Point newCenter = new Point((int)x, (int)y);
     return newCenter;
   }
+
+  public int setFinalX(int x) { //Returns the final point
+    x = (int)finalX;
+    return x;
+  }
+
+  public int setFinalY(int y) {
+    y = (int)finalY;
+    return y;
+  }
+
 }
