@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * BackCmd.java
+ * Command class to perform a back command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 public class BackCmd extends Command {
     private Shape s;

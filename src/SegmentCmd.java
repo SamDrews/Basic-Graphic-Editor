@@ -1,13 +1,16 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * SegmentCmd.java
+ * Command class to perform a segment command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 
 public class SegmentCmd extends Command{
     private Color color;
-    private double initX, finalX, initY, finalY;
-    //private Point finalP;
+    private double initX, initY;
 
 
     public void executePress(Point p, Drawing d) {
@@ -20,7 +23,8 @@ public class SegmentCmd extends Command{
 
 
     public void executeDrag(Point p, Drawing d) {
-        Point initP = new Point((int)initX, (int)initY);
+        Point initP = new Point((int)(initX), (int)(initY));
+
         Segment newSeg = new Segment(color, initP, p);
 
         d.createWhileDrag(newSeg);

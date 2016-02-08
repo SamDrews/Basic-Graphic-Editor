@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * ColorCmd.java
+ * Command class to perform a color command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 
 public class ColorCmd extends Command {

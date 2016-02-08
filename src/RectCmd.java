@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/6/16.
+ * RectCmd.java
+ * Command class to perform a rectangle command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 public class RectCmd extends Command {
     private Color color; // Rect's color

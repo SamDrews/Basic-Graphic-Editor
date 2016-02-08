@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * MoveCmd.java
+ * Command class to perform a move command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 
 public class MoveCmd extends Command {

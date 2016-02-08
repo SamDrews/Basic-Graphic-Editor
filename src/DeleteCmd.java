@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * DeleteCmd.java
+ * Command class to perform a delete command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 
 public class DeleteCmd extends Command {

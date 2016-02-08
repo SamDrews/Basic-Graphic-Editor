@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * EllipseCmd.java
+ * Command class to perform a ellipse command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 public class EllipseCmd extends Command {
     private Color color;

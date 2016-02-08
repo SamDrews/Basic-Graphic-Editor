@@ -2,7 +2,10 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * Created by samdrews on 1/27/16.
+ * Drawing.java
+ * Class to draw on canvas (place Shape objects in the array)
+ *
+ * @author Samson Drews
  */
 
 public class Drawing {

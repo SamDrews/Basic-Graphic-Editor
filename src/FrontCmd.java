@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 2/7/16.
+ * FrontCmd.java
+ * Command class to bring perform a front command.
+ *
+ * @author Samson Drews
+ * @see Command
  */
 
 public class FrontCmd extends Command {

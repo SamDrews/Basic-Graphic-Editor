@@ -12,6 +12,7 @@ import java.awt.*;
 public class Segment extends Shape {
   private double initX, initY, finalX, finalY;
   private final static int THE_TOLERANCE = 3;
+
   /**
    * Create a Shape, setting its color.
    *
@@ -94,16 +95,6 @@ public class Segment extends Shape {
     double y = (initY + finalY) / 2;
     Point newCenter = new Point((int)x, (int)y);
     return newCenter;
-  }
-
-  public int setFinalX(int x) { //Returns the final point
-    x = (int)finalX;
-    return x;
-  }
-
-  public int setFinalY(int y) {
-    y = (int)finalY;
-    return y;
   }
 
 }

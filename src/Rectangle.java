@@ -1,7 +1,11 @@
 import java.awt.*;
 
 /**
- * Created by samdrews on 1/27/16.
+ * Rectangle.java
+ * Class for a Rectangle.
+ *
+ * @author Samson Drews
+ * @see Shape
  */
 public class Rectangle extends Shape {
     private double myX, myY, width, height; // Rect's width, height, and x and y coordinates
