@@ -48,9 +48,7 @@ public class Ellipse extends Shape {
 
 
   public boolean containsPoint(Point p) {
-    return (myX < p.getX() && myY < p.getY()
-            && myX + width > p.getX()
-            && myY + height > p.getY());
+    return pointInEllipse(p, (int)myX, (int)myY, (int)width, (int)height);
   }
 
 

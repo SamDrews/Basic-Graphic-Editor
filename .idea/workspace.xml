@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d726d3-501c-4b0c-b74d-6afad2d78a5b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SegmentCmd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/csc260_Project1/Editor$LineButtonListener.class" afterPath="$PROJECT_DIR$/out/production/csc260_Project1/Editor$LineButtonListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/csc260_Project1/Segment.class" afterPath="$PROJECT_DIR$/out/production/csc260_Project1/Segment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Editor.java" afterPath="$PROJECT_DIR$/src/Editor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Segment.java" afterPath="$PROJECT_DIR$/src/Segment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ellipse.java" afterPath="$PROJECT_DIR$/src/Ellipse.java" />
     </list>
     <ignored path="csc260_Project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,12 +56,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Ellipse.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Ellipse.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Ellipse.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-                  <folding />
+                <state vertical-scroll-proportion="0.60912055">
+                  <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+                  <folding>
+                    <element signature="e#1357#1358#0" expanded="true" />
+                    <element signature="e#1436#1437#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -106,11 +104,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SegmentCmd.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SegmentCmd.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/SegmentCmd.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41530946">
-                  <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -182,11 +180,11 @@
         <option value="$PROJECT_DIR$/src/BackCmd.java" />
         <option value="$PROJECT_DIR$/src/Drawing.java" />
         <option value="$PROJECT_DIR$/src/MoveCmd.java" />
-        <option value="$PROJECT_DIR$/src/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/EllipseCmd.java" />
         <option value="$PROJECT_DIR$/src/Segment.java" />
         <option value="$PROJECT_DIR$/src/Editor.java" />
         <option value="$PROJECT_DIR$/src/SegmentCmd.java" />
+        <option value="$PROJECT_DIR$/src/Ellipse.java" />
       </list>
     </option>
   </component>
@@ -628,7 +626,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,7 +715,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -800,7 +804,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -886,7 +893,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,14 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RectCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1065,14 +1067,6 @@
             <element signature="e#1159#1160#0" expanded="true" />
             <element signature="e#1194#1195#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,9 +1107,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SegmentCmd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41530946">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60912055">
+          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
